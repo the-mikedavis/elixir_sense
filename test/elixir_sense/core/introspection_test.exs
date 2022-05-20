@@ -297,7 +297,7 @@ defmodule ElixirSense.Core.IntrospectionTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type some_type() :: integer()
              ```
 
@@ -331,7 +331,7 @@ defmodule ElixirSense.Core.IntrospectionTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @callback some_callback(integer) :: atom
              ```
 
@@ -352,7 +352,7 @@ defmodule ElixirSense.Core.IntrospectionTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @callback soft_deprecated_callback(integer) :: atom
              ```
 
@@ -370,7 +370,7 @@ defmodule ElixirSense.Core.IntrospectionTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @macrocallback soft_deprecated_macrocallback(integer) :: atom
              ```
 
@@ -387,7 +387,7 @@ defmodule ElixirSense.Core.IntrospectionTest do
              **Opaque**
 
              ### Specs
-             ```
+             ```elixir
              @opaque opaque_type
              ```
 

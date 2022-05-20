@@ -89,7 +89,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec flatten(deep_list) :: list when deep_list: [any | deep_list]
              ```
 
@@ -119,7 +119,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec flatten(deep_list) :: list when deep_list: [any | deep_list]
              ```
 
@@ -200,7 +200,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec flatten(deepList) :: list when deepList: [term | deepList], list: [term]
              ```
              """
@@ -237,7 +237,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec boolean or boolean :: boolean
              ```
 
@@ -283,7 +283,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec some(integer) :: Macro.t
              @spec some(b) :: Macro.t when b: float
              ```
@@ -315,7 +315,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec flatten(deep_list) :: list when deep_list: [any | deep_list]
              ```
 
@@ -368,7 +368,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @spec flatten(deep_list) :: list when deep_list: [any | deep_list]
              ```
 
@@ -504,7 +504,7 @@ defmodule ElixirSense.DocsTest do
       assert subject == "GenServer"
 
       assert docs =~ """
-             ```
+             ```elixir
              @type from :: {pid, tag :: term}
              ```
 
@@ -525,7 +525,7 @@ defmodule ElixirSense.DocsTest do
       assert subject == ":docsh_edoc_xmerl"
 
       assert docs =~ """
-             ```
+             ```elixir
              @type xml_element_content :: [record(:xmlElement) | record(:xmlText) | record(:xmlPI) | record(:xmlComment) | record(:xmlDecl)]
              ```
 
@@ -545,7 +545,7 @@ defmodule ElixirSense.DocsTest do
       assert subject == ":erlang"
 
       assert docs =~ """
-             ```
+             ```elixir
              @type time_unit ::\
              """
     end
@@ -584,7 +584,7 @@ defmodule ElixirSense.DocsTest do
       assert subject == "ElixirSenseExample.CallbackOpaque"
 
       assert docs =~ """
-             ```
+             ```elixir
              @opaque t(x)
              ```
              """
@@ -608,7 +608,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @callback config_change(changed, new, removed) :: :ok when changed: keyword, new: keyword, removed: [atom]
              ```
 
@@ -628,7 +628,7 @@ defmodule ElixirSense.DocsTest do
       assert subject == ":gen_statem"
 
       assert docs =~ """
-             ```
+             ```elixir
              @callback state_name\
              """
     end
@@ -651,7 +651,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @macrocallback optional(a) :: Macro.t when a: atom
              ```
 
@@ -708,7 +708,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type remote_t() :: atom()
              ```
 
@@ -720,7 +720,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type remote_t(a, b) :: {a, b}
              ```
 
@@ -753,7 +753,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @opaque t(x)
              ```
 
@@ -786,7 +786,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type xml_element_content() :: [
                record(:xmlElement)
                | record(:xmlText)
@@ -825,7 +825,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type time_unit() ::
                pos_integer()
                | :second
@@ -869,7 +869,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type keyword() :: [{atom(), any()}]
              ```
 
@@ -883,7 +883,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type keyword(t) :: [{atom(), t}]
              ```
 
@@ -915,7 +915,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              integer()
              ```
 
@@ -947,7 +947,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              @type list() :: [any()]
              ```
 
@@ -961,7 +961,7 @@ defmodule ElixirSense.DocsTest do
 
              ### Specs
 
-             ```
+             ```elixir
              list(t)
              ```
 
@@ -1005,7 +1005,7 @@ defmodule ElixirSense.DocsTest do
 
                  ### Specs
 
-                 ```
+                 ```elixir
                  @spec module_info :: [{:module | :attributes | :compile | :exports | :md5 | :native, term}]
                  ```
 
@@ -1020,7 +1020,7 @@ defmodule ElixirSense.DocsTest do
 
                  ### Specs
 
-                 ```
+                 ```elixir
                  @spec module_info(:module) :: atom
                  @spec module_info(:attributes | :compile) :: [{atom, term}]
                  @spec module_info(:md5) :: binary

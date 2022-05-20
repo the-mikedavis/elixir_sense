@@ -104,7 +104,9 @@ defmodule ElixirSense.Core.ErlangHtml do
 
   def to_markdown({:pre, _attrs1, [{:code, _attrs2, inner}]}, parents, _sanitize_mode) do
     prefix = build_prefix(parents)
-    "```\n" <> prefix <> to_markdown(inner, parents, :none) <> "\n" <> prefix <> "```\n" <> prefix
+
+    "```elixir\n" <>
+      prefix <> to_markdown(inner, parents, :none) <> "\n" <> prefix <> "```\n" <> prefix
   end
 
   for i <- 1..6,

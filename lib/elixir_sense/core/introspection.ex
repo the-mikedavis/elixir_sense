@@ -257,7 +257,7 @@ defmodule ElixirSense.Core.Introspection do
       mod_str = inspect(mod)
       fun_str = Atom.to_string(fun)
 
-      spec_text = "### Specs\n\n```\n#{spec |> Enum.join("\n")}\n```\n\n"
+      spec_text = "### Specs\n\n```elixir\n#{spec |> Enum.join("\n")}\n```\n\n"
       metadata = %{builtin: true}
 
       "> #{mod_str}.#{fun_str}(#{fun_args_text})\n\n#{get_metadata_md(metadata)}#{spec_text}#{@no_documentation}"
@@ -520,7 +520,7 @@ defmodule ElixirSense.Core.Introspection do
       > #{inspect(mod)}.#{type_name}(#{type_args})
 
       #{get_metadata_md(metadata)}### Specs
-      ```
+      ```elixir
       #{type}
       ```
 
@@ -538,7 +538,7 @@ defmodule ElixirSense.Core.Introspection do
 
       #{get_metadata_md(metadata)}### Specs
 
-      ```
+      ```elixir
       #{callback}
       ```
 
@@ -1015,7 +1015,7 @@ defmodule ElixirSense.Core.Introspection do
         ""
 
       spec ->
-        "### Specs\n\n```\n#{spec}\n```\n\n"
+        "### Specs\n\n```elixir\n#{spec}\n```\n\n"
     end
   end
 
@@ -1396,7 +1396,7 @@ defmodule ElixirSense.Core.Introspection do
   end
 
   defp format_type_doc_md({mod, fun}, type_args, doc, spec, metadata) when is_binary(type_args) do
-    formatted_spec = "```\n#{spec}\n```"
+    formatted_spec = "```elixir\n#{spec}\n```"
 
     mod_formatted =
       case mod do

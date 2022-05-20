@@ -287,7 +287,7 @@ defmodule ElixirSense.Core.ErlangHtmlTest do
     ]
 
     assert """
-           ```
+           ```elixir
            var = asd()
            ```
            """ == to_markdown(ast)
